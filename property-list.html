@@ -1,0 +1,128 @@
+
+{% extends 'base-portal.html' %}
+{% load static %}
+{% block title %}Property List{% endblock %}
+    
+    {% block content %}
+        <div class="container-fluid position-relative p-0">
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Property List</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid about py-4">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="bg-light p-2 rounded h-100 wow fadeInUp">
+                            <h4 class="text-primary">Property List</h4>
+                            <div class="table-responsive responsive-card-table">
+                                <table class="display table table-hover table-bordered text-center card-table">
+                                    <thead>
+                                    <tr class="bg-primary">
+                                        <th>Ward No</th>
+                                        <th>Old Ward No</th>
+                                        <th>Area Name</th>
+                                        <th>Service No</th>
+                                        <th>Acknowledgement No</th>
+                                        <th>Owner Name</th>
+                                        <th>Contact No.</th>
+                                        <th>House No.</th>
+                                        <th>Address</th>
+                                        <th>Colony</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>None</td>
+                                            <td>NINDAD GAON-</td>
+                                            <td>516944670</td>
+                                            <td>None</td>
+                                            <td>ANIL AGARWAL</td>
+                                            <td>8875007527</td>
+                                            <td>A-204 GH-II</td>
+                                            <td>JAIPUR</td>
+                                            <td>NINDAD GAON</td>
+                                            <td><a href="{% url 'property-view' %}"><button class="btn btn-primary btn-sm">View</button></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>None</td>
+                                            <td>HARIHAR VIHAR-</td>
+                                            <td>516749503</td>
+                                            <td>None</td>
+                                            <td>MALIRAM JI KAJOD MAL JI</td>
+                                            <td>9999007527</td>
+                                            <td>20</td>
+                                            <td>HARIHAR VIHAR</td>
+                                            <td>HARIHAR VIHAR</td>
+                                            <td><a href="{% url 'property-view' %}"><button class="btn btn-primary btn-sm">View</button></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>None</td>
+                                            <td>HARIHAR VIHAR-</td>
+                                            <td>516749503</td>
+                                            <td>None</td>
+                                            <td>MALIRAM JI KAJOD MAL JI</td>
+                                            <td>9999007527</td>
+                                            <td>20</td>
+                                            <td>NIDAD MOD SIKAR ROAD HARMADA GAON JAIPUR</td>
+                                            <td>HARIHAR VIHAR NIDAD MOD SIKAR ROAD HARMADA GAON JAIPUR</td>
+                                            <td><a href="{% url 'property-view' %}"><button class="btn btn-primary btn-sm">View</button></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>None</td>
+                                            <td>HARIHAR VIHAR-</td>
+                                            <td>516749503</td>
+                                            <td>None</td>
+                                            <td>MALIRAM JI KAJOD MAL JI</td>
+                                            <td>9999007527</td>
+                                            <td>20</td>
+                                            <td>HARIHAR VIHAR</td>
+                                            <td>HARIHAR VIHAR</td>
+                                            <td><a href="{% url 'property-view' %}"><button class="btn btn-primary btn-sm">View</button></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+        {% block portal_page_js %}
+            <script>
+                $(document).ready(function () {
+                    $('.responsive-card-table table').each(function () {
+                    const tableElement = $(this);
+                    const table = tableElement.DataTable({
+                        responsive: false
+                    });
+                    function generateLabels() {
+                        tableElement.find('tbody tr').each(function () {
+                            $(this).find('td').each(function (index) {
+                                const label = tableElement
+                                .find('thead th')
+                                .eq(index)
+                                .text()
+                                .trim();
+                                $(this).attr('data-label', label);
+                            });
+                        });
+                    }
+                    generateLabels();
+                        table.on('draw.dt', function () {
+                            generateLabels();
+                        });
+                    });
+                });
+            </script>
+        {% endblock %}

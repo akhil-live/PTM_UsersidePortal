@@ -1,0 +1,441 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Property Tax Management System{% endblock %}
+
+    {% block content %}
+        <!-- Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <!-- Carousel Start -->
+            <div class="header-carousel owl-carousel">
+                <div class="header-carousel-item">
+                    <img src="{% static 'images/portal/banner/mc_banner_4.jpg' %}" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="header-carousel-item">
+                    <img src="{% static 'images/portal/banner/mc_banner_5.jpg' %}" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="header-carousel-item">
+                    <img src="{% static 'images/portal/banner/mc_banner_2.jpg' %}" class="img-fluid w-100" alt="Image">
+                </div>                
+                <div class="header-carousel-item">
+                    <img src="{% static 'images/portal/banner/mc_banner_3.jpg' %}" class="img-fluid w-100" alt="Image">
+                </div>                
+            </div>
+            <!-- Carousel End -->
+        </div>
+        <!-- Hero End -->
+
+        <!-- Features Start -->
+        <div class="container-fluid feature pt-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Quick Services</h4>
+                    <h1 class="display-5 mb-4">Services for Citizen</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="{% url 'search-property' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fas fa-rupee-sign fa-3x text-primary"></i>
+                                </div>
+                                <h4>Pay UD Tax</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="{% url 'search-property' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fas fa-building fa-3x text-primary"></i>
+                                </div>
+                                <h4>Search Property</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="{% url 'search-property' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fas fa-scroll fa-3x text-primary"></i>
+                                </div>
+                                <h4>View Payment Details</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="{% url 'search-property' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fas fa-money-check fa-3x text-primary"></i>
+                                </div>
+                                <h4>View Due Details</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="{% url 'new-assessment' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fas fa-edit fa-3x text-primary"></i>
+                                </div>
+                                <h4>UDT - Apply Self Assessment</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="#">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fas fa-handshake fa-3x text-primary"></i>
+                                </div>
+                                <h4>Know Your tax Collector</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="{% url 'apply-apatti' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="far fa-clipboard fa-3x text-primary"></i>
+                                </div>
+                                <h4>Apply Apptti</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="{% url 'apatti-search' %}">
+                            <div class="feature-item p-4">
+                                <div class="feature-icon p-4 mb-4">
+                                    <i class="fa fa-search fa-3x text-primary"></i>
+                                </div>
+                                <h4>Search Apptti</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+        
+        <!-- About Start -->
+        <div class="container-fluid about pb-5">
+            <div class="container py-1">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-5 col-lg-5 col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="bg-primary rounded position-relative overflow-hidden">
+                            <img src="{% static 'images/portal/img/rajasthan.png' %}" class="img-fluid rounded w-100" alt="">                            
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div>
+                            <h4 class="text-primary sub-heading">About Us</h4>
+                            <h1 class="display-5 mb-4 heading">Municipal Corporation</h1>
+                            <p class="mb-4">Municipal Corporation is a local self-government which has come into being under the Municipality Act 1959. It is one of the most progressive States in India and its people are quite proactive in keeping themselves abreast of the changing global landscape.
+                                <br>
+                                With rapid urbanization, growing needs of the citizens for efficient & effective service delivery, better civic amenities thereby providing better living standards, the activities of the department have multiplied manifolds.
+                                <br>
+                                For efficient and effective service delivery, the Department is encouraging replacement of traditional delivery system of public services by new and improved system of governance that works better, costs less and is capable of serving the citizens’ needs with ease.
+                            </p>
+                            <div class="row g-4">
+                                <div class="col-sm-6 col-lg-6">
+                                    <a href="{% url 'about' %}" class="btn btn-primary rounded-pill py-1 px-3 flex-shrink-0">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Notification Start -->
+        <div class="container-fluid service">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Public Updates</h4>
+                    <h1 class="display-5 mb-2">Notifications</h1>
+                </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 position-relative">
+                    <video id="myVideo" class="w-100 rounded shadow" autoplay muted loop playsinline controls>
+                        <source src="{% media 'portal/video/sample_video.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-lg-6 col-md-6 mt-2">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header bg-primary text-primary d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                            Notifications
+                            </span>
+                            <button
+                            class="btn btn-light btn-sm control-btn"
+                            id="toggleBtn"
+                            >
+                            <i class="bi bi-pause-fill" id="toggleIcon"></i>
+                            </button>
+                        </div>
+                        <div class="card-body p-2">
+                            <div class="marquee-container">
+                                <div class="marquee-track" id="marqueeTrack">
+                                    <div class="notification-item">
+                                    Door To Door Collection Of UD Tax From Wards
+                                    </div>
+                                    <div class="notification-item">
+                                    Door To Door Survey of Properties
+                                    </div>
+                                    <div class="notification-item">
+                                    10% Rebate upto 30 July 2026
+                                    </div>
+                                    <div class="notification-item">
+                                    Property Survey Camp At Jagatpura
+                                    </div>
+                                    <div class="notification-item">
+                                    Property Survey Camp At Sanganer
+                                    </div>
+                                    <div class="notification-item">
+                                    Property Survey Camp At Malviya Nagar
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-light w-100 rounded-pill py-2 px-4" href="notification.html">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Notification End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid service">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">What's New</h4>
+                    <h1 class="display-5 mb-4">Our Features</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="{% url 'notification' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/notification.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">Public News</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="{% url 'gallery' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/gallery-icon.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">Gallery</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="{% url 'search-property' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/qr_online_pay.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">Pay Online</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="{% url 'faq' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/faq.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">FAQ</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="#">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/info.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">User Manual</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="{% url 'feedback' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/feedback.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">FeedBack</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="{% url 'feedback' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/raise_obj.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">Raise Objection</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="{% url 'acts' %}">
+                            <div class="service-item">
+                                <div class="service-img text-center">
+                                    <img src="{% static 'images/portal/img/act_file.png' %}" class="img-fluid rounded-top w-100" alt="Image">
+                                </div>
+                                <div class="rounded-bottom p-4 text-center">
+                                    <h4 class="d-inline-block mb-2">Acts</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+        <!-- Event Gallery Start -->
+        <div class="container-fluid event pb-5">
+            <div class="container pb-1">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Gallery</h4>
+                    <h1 class="display-5 mb-4">Our Events</h1>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'gallery' %}">View All Events</a>
+                </div>
+                <div class="owl-carousel event-carousel wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="event-item p-4">
+                        <div class="event-img mb-4">
+                            <img src="{% static 'images/portal/gallery/4.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                        </div>
+                    </div>
+                    <div class="event-item p-4">
+                        <div class="event-img mb-4">
+                            <img src="{% static 'images/portal/gallery/8.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                        </div>
+                    </div>
+                    <div class="event-item p-4">
+                        <div class="event-img mb-4">
+                            <img src="{% static 'images/portal/gallery/5.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                        </div>
+                    </div>
+                    <div class="event-item p-4">
+                        <div class="event-img mb-4">
+                            <img src="{% static 'images/portal/gallery/7.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Gallery End -->
+
+        <!-- FAQs Start -->
+        <div class="container-fluid faq-section pb-5">
+            <div class="container pb-2 overflow-hidden">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">FAQs</h4>
+                    <h1 class="display-5 mb-4">Frequently Asked Questions</h1>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'faq' %}">View All FAQ</a>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 col-12 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="accordion accordion-flush bg-light rounded p-4" id="accordionFlushSection">
+                            <div class="accordion-item rounded-top">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    1. नगरीय विकास कर (यू.डी. टैक्स) क्या है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">राजस्थान नगरपालिका अधिनियम, 2009 के तहत राज्य सरकार द्वारा राज्य की समस्त नगरपालिकाओं, नगर न्यास, नगर परिषद एवं नगर निगमों की परिसीमा में स्थित सम्पत्तियों पर गृहकर को समाप्त कर वित्तीय वर्ष 2007-08 से जो कर उदग्रहण किया गया है उसे नगरीय विकास कर कहते है। अधिक जानकारी के लिए अपने मोबाईल पर <code> propertytaxmanagement </code> पर जाये।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    2. नगरीय विकास कर के दायरे में कोनसी सम्पत्तियां आती है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नगरीय विकास कर सभी सम्पत्तियाँ आती है, जो नियमानुसार कर के दायरें में आती है। जिन पर नगरीय विकास कर आवासीय, व्यावसायिक, औद्योगिक एवं संस्थानिक के अनुसार लगाया जाता है।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    3. क्या सभी सम्पत्तियां नगरीय विकास कर के दायरें में आती है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं सभी सम्पत्तियां नगरीय विकास कर के दायरें में नहीं आती है। राज्य सरकार के नियमानुसार निम्न सम्पत्तियां नगरीय विकास कर के दायरें में आती है। शेष सम्पत्तियां कर मुक्त हैः-
+                                        <br>
+                                        1. 300 वर्गगज से अधिक के आवासीय भूखण्डों पर नगरीय विकास कर लागू है।
+                                        <br>
+                                        2. 100 वर्गगज से अधिक के व्यावसायिक भूखण्डों पर या उक्त भूखण्ड पर निर्मित तलों के अनुसार जो 900 वर्गफीट से अधिक हो।
+                                        <br>
+                                        3. औद्योगिक भूखण्डों पर 500 वर्गगज से अधिक के भूखण्ड या उक्त भूखण्ड के निर्मित तलों के अनुसार जो 4500 वर्गफीट से अधिक हो (औद्योगिक क्षेत्रों में उत्पादन श्रेणी के उद्योग को छोडकर)।
+                                        <br>
+                                        4. 100 वर्गगज से अधिक के संस्थानिक भूखण्डों पर भूखण्ड या उक्त भूखण्ड पर निर्मित तलों के अनुसार जो 900 वर्गफीट से अधिक हो।
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    4. नगरीय विकास कर किन रिहायशी मकानों पर लगता है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नगरीय विकास कर समस्त 300 वर्गगज से अधिक के रिहायशी मकानों पर और फ्लैट में 1500 वर्गफीट से अधिक निर्मित क्षेत्र होने पर नगरीय विकास कर उदग्रहणीय है।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    5. मेरा आवासीय मकान 50 वर्गगज में 3 मंजीला निर्मित है। जिसका कुल निर्मित क्षेत्रफल 1800 वर्गफीट है क्या इस पर नगरीय विकास कर लगेगा ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं, इस नगरीय विकास कर नहीं लगेगा।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                    6. मेरा आवासीय भूखण्ड 110 वर्गगज का है क्या इस पर नगरीय विकास कर लागू है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं इस प्रकार के आवासीय भूखण्डों पर नगरीय विकास कर नहीं लगेगा है।</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQs End -->
+        
+    {% endblock %}

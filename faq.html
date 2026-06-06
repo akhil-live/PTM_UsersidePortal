@@ -1,0 +1,118 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}FAQ{% endblock %}
+
+    {% block content %} 
+        <div class="container-fluid position-relative p-0">
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">FAQ</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active text-grey">FAQ</li>
+                    </ol>    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid faq-section py-4">
+            <div class="container pb-4 overflow-hidden">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 col-12 wow fadeInLeft" data-wow-delay="0.2s">
+                        <h4 class="text-primary">Frequently Asked Questions</h4>
+                        <div class="accordion accordion-flush bg-light rounded p-2" id="accordionFlushSection">
+                            <div class="accordion-item rounded-top">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    1. नगरीय विकास कर (यू.डी. टैक्स) क्या है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">राजस्थान नगरपालिका अधिनियम, 2009 के तहत राज्य सरकार द्वारा राज्य की समस्त नगरपालिकाओं, नगर न्यास, नगर परिषद एवं नगर निगमों की परिसीमा में स्थित सम्पत्तियों पर गृहकर को समाप्त कर वित्तीय वर्ष 2007-08 से जो कर उदग्रहण किया गया है उसे नगरीय विकास कर कहते है। अधिक जानकारी के लिए अपने मोबाईल पर <code> propertytaxmanagement </code> पर जाये।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    2. नगरीय विकास कर के दायरे में कोनसी सम्पत्तियां आती है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नगरीय विकास कर सभी सम्पत्तियाँ आती है, जो नियमानुसार कर के दायरें में आती है। जिन पर नगरीय विकास कर आवासीय, व्यावसायिक, औद्योगिक एवं संस्थानिक के अनुसार लगाया जाता है।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    3. क्या सभी सम्पत्तियां नगरीय विकास कर के दायरें में आती है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं सभी सम्पत्तियां नगरीय विकास कर के दायरें में नहीं आती है। राज्य सरकार के नियमानुसार निम्न सम्पत्तियां नगरीय विकास कर के दायरें में आती है। शेष सम्पत्तियां कर मुक्त हैः-
+                                        <br>
+                                        1. 300 वर्गगज से अधिक के आवासीय भूखण्डों पर नगरीय विकास कर लागू है।
+                                        <br>
+                                        2. 100 वर्गगज से अधिक के व्यावसायिक भूखण्डों पर या उक्त भूखण्ड पर निर्मित तलों के अनुसार जो 900 वर्गफीट से अधिक हो।
+                                        <br>
+                                        3. औद्योगिक भूखण्डों पर 500 वर्गगज से अधिक के भूखण्ड या उक्त भूखण्ड के निर्मित तलों के अनुसार जो 4500 वर्गफीट से अधिक हो (औद्योगिक क्षेत्रों में उत्पादन श्रेणी के उद्योग को छोडकर)।
+                                        <br>
+                                        4. 100 वर्गगज से अधिक के संस्थानिक भूखण्डों पर भूखण्ड या उक्त भूखण्ड पर निर्मित तलों के अनुसार जो 900 वर्गफीट से अधिक हो।
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    4. नगरीय विकास कर किन रिहायशी मकानों पर लगता है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नगरीय विकास कर समस्त 300 वर्गगज से अधिक के रिहायशी मकानों पर और फ्लैट में 1500 वर्गफीट से अधिक निर्मित क्षेत्र होने पर नगरीय विकास कर उदग्रहणीय है।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    5. मेरा आवासीय मकान 50 वर्गगज में 3 मंजीला निर्मित है। जिसका कुल निर्मित क्षेत्रफल 1800 वर्गफीट है क्या इस पर नगरीय विकास कर लगेगा ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं, इस नगरीय विकास कर नहीं लगेगा।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                    6. मेरा आवासीय भूखण्ड 110 वर्गगज का है क्या इस पर नगरीय विकास कर लागू है ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं इस प्रकार के आवासीय भूखण्डों पर नगरीय विकास कर नहीं लगेगा है।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingSaven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSaven" aria-expanded="false" aria-controls="flush-collapseSaven">
+                                    7. मेरा आवासीय मकान 290 वर्गगज का है जिसमें खाली क्षेत्रफल 100 वर्गगज है 190 वर्गगज में मकान बना हुआ है। क्या इस पर नगरीय विकास कर लगेगा?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSaven" class="accordion-collapse collapse" aria-labelledby="flush-collapseSaven" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">नहीं इस प्रकार के आवासीय भूखण्डों पर नगरीय विकास कर नहीं लगेगा है।</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                    8. मेरा आवासीय भूखण्ड 301 वर्गगज का है क्या इस पर नगरीय विकास कर लगेगा ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-collapseEight" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">हां, इस पर नगरीय विकास कर लागू होगा।</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

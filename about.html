@@ -1,0 +1,69 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+    {% block content %}
+        <div class="container-fluid position-relative p-0">
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active text-grey">About</li>
+                    </ol>    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid about py-4">
+            <div class="container py-4">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="bg-primary rounded position-relative overflow-hidden">
+                            <img src="{% static 'images/portal/img/mc_building.png' %}" class="img-fluid rounded w-100" alt="about">
+                        </div>
+                    </div>
+                    <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.2s">
+                        <div>
+                            <h4 class="text-primary">About Us</h4>
+                            <h1 class="display-5 mb-4">Municipal Corporation</h1>
+                            <p class="mb-4">
+                                Municipal Corporation is a local self-government which has come into being under the Municipality Act 1959. It is one of the most progressive States in India and its people are quite proactive in keeping themselves abreast of the changing global landscape. 
+                                <br>
+                                With rapid urbanization, growing needs of the citizens for efficient & effective service delivery, better civic amenities thereby providing better living standards, the activities of the department have multiplied manifolds. 
+                                <br>
+                                For efficient and effective service delivery, the Department is encouraging replacement of traditional delivery system of public services by new and improved system of governance that works better, costs less and is capable of serving the citizens’ needs with ease.
+                            </p>
+                            <div class="row g-2">
+                                <div class="col-md-6 col-lg-4 col-xl-4">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5>Municipal Corporations</h5>
+                                            <p><strong>10</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-4 ">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5>Municipal Council</h5>
+                                            <p><strong>51</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-4">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5>Municipal Boards</h5>
+                                            <p><strong>248</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    {% endblock %}

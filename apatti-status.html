@@ -1,0 +1,58 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Apatti Status{% endblock %}
+
+    {% block content %}
+        <div class="container-fluid about py-3">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="bg-light p-3 rounded h-100 wow fadeInUp">
+                          <h4 class="text-primary">Apatti Summary Status</h4>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card card-stats card-round">
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <div class="table-responsive">
+                                        <table class="display table table-bordered table-head-bg-light">
+                                          <tbody>
+                                            <tr>
+                                              <td class="text-dark"><strong>Apatti Number</strong></td>
+                                              <td class="text-dark"><strong>123456</strong></td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Service No.</td>
+                                              <td class="text-dark">516436735</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Created</td>
+                                              <td class="text-dark">22-05-2026</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Apatti Description</td>
+                                              <td class="text-dark">Correction in owner name</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Remark</td>
+                                              <td class="text-dark">None</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Status</td>
+                                              <td class="text-dark"><strong class="text-warning">Under Review</strong></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

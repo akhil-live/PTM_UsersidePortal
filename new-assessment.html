@@ -1,0 +1,41 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}New Assessment{% endblock %}
+
+    {% block content %}
+        <div class="container-fluid about py-5">
+            <div class="container py-2">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-5 col-lg-5 col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="bg-primary rounded position-relative overflow-hidden">
+                            <img src="{% static 'images/portal/img/assessment.png' %}" class="img-fluid rounded w-100" alt="">                            
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="bg-light p-5 rounded h-100 wow fadeInUp">
+                            <!-- <form> -->
+                                <div class="row g-4">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="form-floating">
+                                            <select class="form-select pb-1" id="ulb" name="ulb">
+                                                <option value="">Select Urban Local Bodies</option>
+                                                <option value="">Nagar Nigam Jaipur</option>
+                                                <option value="">Nagar Nigam Udaipur</option>
+                                            </select>
+                                            <label for="ulb">Select ULB <span class="text-danger">*</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#"><button class="btn btn-primary py-2 me-2">Search</button></a>
+                                        <button class="btn btn-dark py-2">Reset</button>
+                                    </div>
+                                </div>
+                            <!-- </form>  -->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    {% endblock %}

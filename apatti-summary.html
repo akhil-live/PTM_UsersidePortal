@@ -1,0 +1,58 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Apatti Summary{% endblock %}
+
+    {% block content %}
+        <div class="container-fluid about py-3">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="bg-light p-3 rounded h-100 wow fadeInUp">
+                          <h4 class="text-primary">Apatti Summary</h4>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card card-stats card-round">
+                                  <div class="card-body">
+                                    <div class="row">
+                                        <h4 class="text-success">Submitted Successfully!</h4>
+                                        <p>You have applied the apatti successfully and perticulars of the application are given as under:</p>
+                                      <div class="table-responsive">
+                                        <table class="display table table-bordered table-head-bg-light">
+                                          <tbody>
+                                            <tr>
+                                              <td class="text-dark"><strong>Apatti Number</strong></td>
+                                              <td class="text-dark"><strong>123456</strong></td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Service No.</td>
+                                              <td class="text-dark">516436735</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Created</td>
+                                              <td class="text-dark">22-05-2026</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-dark">Apatti Description</td>
+                                              <td class="text-dark">Correction in owner name</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                      <div class="d-print-none">
+                                        <p class="text-center pt-2">
+                                          <button type="submit" class="btn btn-info btn-sm mb-1" name="submit" id="submit"><strong>Print</strong></button>
+                                          <button type="submit" class="btn btn-warning btn-sm mb-1" name="submit" id="submit"><strong>download</strong></button>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

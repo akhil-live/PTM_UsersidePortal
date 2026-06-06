@@ -1,0 +1,117 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+    {% block content %} 
+        <div class="container-fluid position-relative p-0">
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active text-grey">Contact Us</li>
+                    </ol>    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid contact py-5">
+            <div class="container py-2">
+                <div class="row g-5">
+                    <div class="col-xl-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="bg-light rounded p-5 mb-5">
+                                <h4 class="text-primary mb-4">Get in Touch</h4>
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="contact-add-item">
+                                            <div class="contact-icon text-primary mb-4">
+                                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Address</h4>
+                                                <p class="mb-0">Nirman Nagar, Jaipur, Rajasthan - 302019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="contact-add-item">
+                                            <div class="contact-icon text-primary mb-4">
+                                                <i class="fas fa-envelope fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Mail Us</h4>
+                                                <p class="mb-0">ptm@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="contact-add-item">
+                                            <div class="contact-icon text-primary mb-4">
+                                                <i class="fa fa-phone-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Telephone</h4>
+                                                <p class="mb-0">18001234567</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light p-5 rounded h-100 wow fadeInUp" data-wow-delay="0.2s">
+                                <h4 class="text-primary">Send Your Message</h4>
+                                <form>
+                                    <div class="row g-4">
+                                        <div class="col-lg-12 col-xl-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control border-0" id="name" placeholder="Your Name" required>
+                                                <label for="name">Your Name <span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control border-0" id="email" placeholder="Your Email" required>
+                                                <label for="email">Your Email <span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-6">
+                                            <div class="form-floating">
+                                                <input type="phone" class="form-control border-0" id="phone" placeholder="Phone" required>
+                                                <label for="phone">Your Phone <span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control border-0" id="project" placeholder="Project" required>
+                                                <label for="project">Your Project <span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control border-0" id="subject" placeholder="Subject" required>
+                                                <label for="subject">Subject <span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px" required></textarea>
+                                                <label for="message">Message <span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="rounded h-100">
+                            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=nirman nagar jaipur rajasthan&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">embed-googlemap.com</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:100%;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:100%;}.gmap_iframe {width:100%!important;height:100%!important;}</style></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

@@ -1,0 +1,327 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Property Payment Receipt{% endblock %}
+
+    {% block content %}
+        <div class="container-fluid position-relative p-0">
+          <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Property Payment Receipt</h4>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid about py-3">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="bg-light p-3 rounded h-100 wow fadeInUp">
+                            <h4 class="text-primary">Property Payment Receipt</h4>
+                            <div class="row">
+                              <div class="col-md-12 col-12">
+                                <div class="card card-stats card-round">
+                                  <div class="card-header d-print-none text-start">
+                                    <a href="{% url 'search-property' %}"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i> Back</strong></button></a>
+                                  </div>
+                                  <div class="card-body">
+                    
+                                    <div class="row" style="width:205mm;height:auto;margin:auto; padding:8px;" id="printableArea">
+                                      <div class="table-responsive demandPrintView" style="width:100%; background:#FFFFFF; padding: 4px; border:#567EBF solid 2px;">
+                                        <table class="display table table-borderless" width="100%">
+                                          <tbody>
+                                            <tr>
+                                              <td style="padding: 0px;">
+                                                <div style="float:left; width:100px; padding:1px;  text-align:left; ">
+                                                  <img src="{% static 'images/portal/logo/janani_logo.png' %}" alt="Janani Logo" width="80">
+                                                </div>
+                                                <div style="float:right; text-align:right; width:175px; padding:1px;   ">
+                                                  <img src="{% static 'images/portal/logo/swachh_bharat.jpg' %}" alt="swachh_bharat Logo" width="170" style="margin-top:10px;margin-bottom: 0px;">
+                                                </div>
+                                                <div class="text-center" style=" text-align:center; color:#003B5D; line-height:28px;  padding-top:5px; margin: auto;">
+                                                  <span style="font-weight:bold; font-size:26px">नगर निगम जयपुर</span>
+                                                <br>
+                                                <span style="font-size:14px">(राजस्थान नगरपालिका लेखा नियम 1963 के नियम 22,23 और 24(1) के अधीन)</span>
+                                                <br>
+                                                <span style="font-size:20px; font-weight:bold;">भुगतान रसीद</span>
+                                                </div>
+                                                
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">वार्ड क्र.</td>
+                                                <td class="fw-bold">सर्विस क्र.</td>
+                                                <td class="fw-bold">रसीद क्र.</td>
+                                                <td class="fw-bold">रसीद दिनांक</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">3</td>
+                                                <td class="fw-bold">516624422</td>
+                                                <td class="fw-bold">RCT272202464520</td>
+                                                <td class="fw-bold">Feb. 27, 2024</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">मद</td>
+                                                <td class="fw-bold" colspan="3">URBAN DEVELOPMENT TAX</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">स्वामी / अधिभोगी का नाम</td>
+                                                <td class="fw-bold" colspan="3">B.K.MALPANI NARAYAN MALPANI </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">सम्पत्ति का पता (Property Address)</td>
+                                                <td class="fw-bold" colspan="3">0 None RAJ.HIGH.SCHOOL KE SAMNE MAIN SIKAR ROAD HARMADA GAON HARMADA GAON 302032</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">पत्राचार पता (Correspondence Address)</td>
+                                                <td class="fw-bold" colspan="3">0 None RAJ.HIGH.SCHOOL KE SAMNE MAIN SIKAR ROAD HARMADA GAON HARMADA GAON 302032</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">मोबाइल न.</td>
+                                                <td class="fw-bold" colspan="3">9784542912</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">भूखण्ड क्षेत्रफल <br> (वर्गगज में) <br>[ Plot Area (in Sq.Yd.) ]</td>
+                                                <td class="fw-bold">निर्मित तल <br> क्षेत्रफल (वर्ग गज में) <br>[ Plinth Area (in Sq.Yd.) ]</td>
+                                                <td class="fw-bold">खाली क्षेत्रफल <br> (वर्ग गज में) <br>[ Vacant Area (in Sq.Yd.) ]</td>
+                                                <td class="fw-bold">कुल निर्मित क्षेत्रफल <br> (वर्ग फुट में) <br>[ Total Builtup Area (in Sq.Ft.) ]</td>
+                                                <td class="fw-bold">फ्लैट/काॅम्प्लेक्स/ <br>बहुस्वामित्व <br>[Multiple Ownership]</td>
+                                                <td class="fw-bold">सड़क <br>[Road]</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">411.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">411.0</td>
+                                                <td class="fw-bold">None</td>
+                                                <td class="fw-bold">No</td>
+                                                <td class="fw-bold">Exterior Road</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td colspan="4" class="fw-bold">सम्पत्ति का विवरण</td>
+                                              </tr>
+                                              <tr class="text-center" >
+                                                <td class="fw-bold">तल वार</td>
+                                                <td class="fw-bold">उपयोग की श्रेणी</td>
+                                                <td class="fw-bold">उपयोग का प्रकार</td>
+                                                <td class="fw-bold">निर्मित क्षेत्रफल ( वर्गफुट )</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">Vacant Land</td>
+                                                <td class="fw-bold">Residential</td>
+                                                <td class="fw-bold">General</td>
+                                                <td class="fw-bold">411.0</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">Payment Mode</td>
+                                                <td class="fw-bold">Reference No.</td>
+                                                <td class="fw-bold">Bank Name</td>
+                                                <td class="fw-bold">Branch Name</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">ONLINE</td>
+                                                <td class="fw-bold">None</td>
+                                                <td class="fw-bold">None</td>
+                                                <td class="fw-bold">None</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td rowspan="2" class="fw-bold">Year</td>
+                                                <td colspan="3" class="fw-bold">Payable Amount</td>
+                                                <td colspan="4" class="fw-bold">Received Amount</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">Due Tax</td>
+                                                <td class="fw-bold">Penalty</td>
+                                                <td class="fw-bold">Total</td>
+                                                <td class="fw-bold">Due Tax</td>
+                                                <td class="fw-bold">Penalty</td>
+                                                <td class="fw-bold">Rebate</td>
+                                                <td class="fw-bold">Total</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">2023-2024</td>
+                                                <td class="fw-bold">2247.1</td>
+                                                <td class="fw-bold">0</td>
+                                                <td class="fw-bold">2247</td>
+                                                <td class="fw-bold">2247</td>
+                                                <td class="fw-bold">0</td>
+                                                <td class="fw-bold">0</td>
+                                                <td class="fw-bold">2247.1</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td rowspan="2" class="fw-bold text-start">Payment Duration : 2023-2024 TO 2023-2024</td>
+                                                <td colspan="2" class="fw-bold">Payable Amount</td>
+                                                <td colspan="2" class="fw-bold">Received Amount</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">Arrears</td>
+                                                <td class="fw-bold">Current</td>
+                                                <td class="fw-bold">Arrears</td>
+                                                <td class="fw-bold">Current</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold text-start">Urban Development Tax</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">2247.14</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">2247.14</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold text-start">Interest</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">0.00</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold text-start">Penalty</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">0.00</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">Total Amount</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">2247.14</td>
+                                                <td class="fw-bold">0.00</td>
+                                                <td class="fw-bold">2247.14</td>
+                                              </tr>
+                                              <tr class="text-start">
+                                                <td class="fw-bold">Payable Amt.: <span> 2247.00</span></td>
+                                                <td colspan="2" class="fw-bold">Rebate Amt. : <span> 0.00</span></td>
+                                                <td colspan="2" class="fw-bold">Advance Adjusted : <span> 0.00</span></td>
+                                              </tr>
+                                              <tr class="text-start">
+                                                <td class="fw-bold">Actual Payable Amt. : <span> 2247.00</span></td>
+                                                <td colspan="4" class="fw-bold">Advance Amount : <span> 0.00</span></td>
+                                              </tr>
+                                              <tr class="text-start">
+                                                <td class="fw-bold">Total Received Amt. : <span> 2247.00</span></td>
+                                                <td colspan="4" class="fw-bold">Outstanding Amt. (Till Receipt Date).: <span> 0.00</span></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr style="border-top: 1px solid #abafb9">
+                                                <td colspan="3">
+                                                  <span class="fw-bold">नोट:</span>
+                                                  <ol>
+                                                    <li>For any query dial Toll Free Number : 1800-572-8545 or go to rajmunicipal.com to register your complaint.</li>
+                                                    <li>चेक की राशि बैंक द्वारा प्राप्त होने पर ही रसीद वैध मानी जाएगी ।</li>
+                                                    <li>कर का भुगतान इमारत / ढांचों को कोई कानूनी हैसियत प्रदान नहीं करेगा और / या न ही भुगतान कर्ता को कोई कानूनी अधिकार प्रदान करेगा ।</li>
+                                                    <li>कर के भुगतान से किसी भी प्रकार का अवैध निर्माण / अनुमति विपरित उपयोग वैध मान्य नहीं होगा |</li>
+                                                    <li>You may validate receipt by scaning QR Code.</li>
+                                                  </ol>
+                                                </td>
+                                                <td>
+                                                  <div style="width:140px; height:140px; border:solid 1px #333" id="qrcode-scan">
+                                                    <img src="{% static 'images/portal/img/sampleqr.png' %}" alt="QR Code" width="140" height="140">
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="4">
+                                                  <table class="display table table-borderless" width="100%" style="margin-bottom: 0.5rem;">
+                                                    <tbody>
+                                                      <tr class="text-center">
+                                                        <td width="33%" style="border-bottom: 0px;">
+                                                          केशियर
+                                                          <br>
+                                                          (कम्प्यूटर से जारी हस्ताक्षर आवश्यक नहीं)	
+                                                        </td>
+                                                        <td width="33%" style="border-bottom: 0px;">
+                                                          <img src="{% static 'images/portal/logo/sample-stamp.jpg' %}" alt="stamp" width="100" style="margin-top: -40px; margin-bottom: 10px;">
+                                                          <br>
+                                                          <span>भूल-चूक लेनी देनी</span>
+                                                        </td>
+                                                        <td width="33%" style="border-bottom: 0px;">
+                                                          सम्पत्ति स्वामी/अधिभोगी के हस्ताक्षर एवं नाम
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                                        
+                                      </div>
+                                      
+                                    </div>
+                                    <div class="d-print-none">
+                                        <p class="text-center pt-2">
+                                            <button type="submit" class="btn btn-info btn-sm mb-1" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
+                                            <button type="submit" class="btn btn-warning btn-sm mb-1"><strong> Download</strong></button>
+                                        </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>                       
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+      {% block portal_page_js %}
+      <script>
+        function printTable(areaID) 
+        {
+            var printContent = document.getElementById(areaID).innerHTML;
+            var originalContent = document.body.innerHTML;
+            document.body.innerHTML = printContent;
+            window.print();
+            document.body.innerHTML = originalContent;
+        }
+      </script>
+      {% endblock %}

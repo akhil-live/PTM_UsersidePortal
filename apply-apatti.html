@@ -1,0 +1,279 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Apply Apatti{% endblock %}
+
+    {% block content %} 
+        
+      <div class="container-fluid position-relative p-0">
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Apply Apatti</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="breadcrumb-item active text-grey">Apply Apatti</li>
+                </ol>    
+            </div>
+        </div>
+      </div>
+        <div class="container-fluid about py-3">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="bg-light p-3 rounded h-100 wow fadeInUp">
+                          <h4 class="text-primary">Property Details</h4>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card card-stats card-round">
+                                  <div class="card-header d-print-none text-start">
+                                    <a href="{% url 'apatti-search' %}"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i> Back</strong></button></a>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <h5 class="py-2"><strong>Basic Details</strong></h5>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="oldServiceNo">Old Service No.</label>
+                                          <p class="text-dark">None</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="appNo">Application No.</label>
+                                          <p class="text-dark">None</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="entryType">Entry Type</label>
+                                          <p class="text-dark">None</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="appliedDate">Applied Date </label>
+                                          <p class="text-dark">28-07-2020</p>
+                                        </div>                        
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="serviceNo">Service No.</label>
+                                          <p class="text-dark">516436735</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="ward">Ward</label>
+                                          <p class="text-dark">8</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="wardArea">Ward Area </label>
+                                          <p class="text-dark">VIDHYADHAR NAGAR-VIDYADHAR NAGAR AREA</p>
+                                        </div>     
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <h5 class="py-2"><strong>Owners Details</strong></h5>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="ownerName">Owner Name</label>
+                                          <p class="text-dark">B.K.MALPANI NARAYAN MALPANI</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="relation">Relation</label>
+                                          <p class="text-dark">W/O</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="guardianName">Guardian Name</label>
+                                          <p class="text-dark">B.K.MALPANI NARAYAN MALPANI</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="gender">Gender</label>
+                                          <p class="text-dark">MALE</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="age">Age</label>
+                                          <p class="text-dark">0</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="mobileNo">Mobile No.</label>
+                                          <p class="text-dark">9784542912</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <h5 class="py-2"><strong>Property Details</strong></h5>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="roadType">Road Type</label>
+                                          <p class="text-dark">0</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="vacantArea">Vacant Area</label>
+                                          <p class="text-dark">0</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="plinthArea">Plinth Area</label>
+                                          <p class="text-dark">0</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="plotArea">Plot Area</label>
+                                          <p class="text-dark">0</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <h5 class="py-2"><strong>Property Address</strong></h5>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="houseNo">House No.</label>
+                                          <p class="text-dark">0</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="street">Street</label>
+                                          <p class="text-dark">None</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="landmark">Landmark</label>
+                                          <p class="text-dark">RAJ.HIGH.SCHOOL KE SAMNE MAIN SIKAR ROAD</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="colony">Colony</label>
+                                          <p class="text-dark">HARMADA GAON</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="pincode">Pin Code</label>
+                                          <p class="text-dark">302032</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="address">Address</label>
+                                          <p class="text-dark">HARMADA GAON</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <h5 class="py-2"><strong>Floor Details</strong></h5>
+                                      <div class="table-responsive">
+                                        <table class="display table table-hover table-bordered table-head-bg-light">
+                                          <thead>
+                                            <tr>
+                                              <th>Floor No.</th>
+                                              <th>Usage Type</th>
+                                              <th>Usage Sub Category</th>
+                                              <th>Builtup Area</th>
+                                              <th>From Date</th>
+                                              <th>Upto Date</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td class="text-dark">Vacant Land</td>
+                                              <td class="text-dark">Residential</td>
+                                              <td class="text-dark">General</td>
+                                              <td class="text-dark">411.0 Sq ft.</td>
+                                              <td class="text-dark">01-04-25</td>
+                                              <td class="text-dark">31-03-26</td>
+                                            </tr>
+                                            
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                      <div class="row">
+                                        <h5 class="py-2"><strong>Apatii</strong></h5>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 py-2">
+                                          <div class="form-group">
+                                            <label class="form-label">Apatti Related To:</label>
+                                            <br>
+                                            <div class="selectgroup selectgroup-pills">
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Related To Area" class="selectgroup-input" id="check1">
+                                                <span class="selectgroup-button" for="check1">Area</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Related To Year" class="selectgroup-input" id="check2">
+                                                <span class="selectgroup-button" for="check2">Year</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Related To Owner Name & Address" class="selectgroup-input" id="check3">
+                                                <span class="selectgroup-button" for="check3">Owner Name & Address</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="DLC Change" class="selectgroup-input" id="check4">
+                                                <span class="selectgroup-button" for="check4">DLC Change</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Penalty" class="selectgroup-input" id="check5">
+                                                <span class="selectgroup-button" for="check5">Penalty</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Related To Property Category" class="selectgroup-input" id="check6">
+                                                <span class="selectgroup-button" for="check6">Property Category</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Duplicate Demand" class="selectgroup-input" id="check7">
+                                                <span class="selectgroup-button" for="check7">Duplicate Demand</span>
+                                              </label>
+                                              <label class="selectgroup-item">
+                                                <input type="checkbox" name="value" value="Others" class="selectgroup-input" id="check8">
+                                                <span class="selectgroup-button" for="check8">Others</span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-3 col-sm-6 col-12">
+                                          <div class="form-group">
+                                            <label for="uploadImage">Upload Supporting Document</label>
+                                            <input type="file" class="form-control mb-2" id="uploadImage" name="uploadImage">
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-9 col-sm-6 col-12">
+                                          <div class="form-group">
+                                            <label for="apattiDesc">Apatti Description</label>
+                                            <textarea class="form-control text-dark" name="apattiDesc" id="apattiDesc" cols="20" rows="4" placeholder="Type here.."></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="d-print-none">
+                                        <p class="text-center pt-2">
+                                          <a href=""><button type="submit" class="btn btn-success btn-md" name="submit" id="submit"><strong>Submit</strong></button></a>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

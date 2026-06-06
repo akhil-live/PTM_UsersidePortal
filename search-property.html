@@ -1,0 +1,78 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+        
+    {% block title %}Property Tax Management System - Search Property{% endblock %}
+        
+    {% block content %}
+        <div class="container-fluid position-relative p-0">
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Search Property</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active text-grey">Search Property</li>
+                    </ol>    
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid about py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-5 col-lg-5 col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="bg-primary rounded position-relative overflow-hidden">
+                            <img src="{% static 'images/portal/img/online-tax-pay.jpg' %}" class="img-fluid rounded w-100" alt="">                            
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="bg-light p-5 rounded h-100 wow fadeInUp">
+                            <h4 class="text-primary">Please provide any one property detail for UD Tax payment.</h4>
+                            <!-- <form> -->
+                                <div class="row g-4">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="ulb" name="ulb">
+                                                <option value="">Select Urban Local Bodies</option>
+                                                <option value="">Nagar Nigam Jaipur</option>
+                                                <option value="">Nagar Nigam Udaipur</option>
+                                            </select>
+                                            <label for="ulb">Select ULB <span class="text-danger">*</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="service" name="service" placeholder="Enter Service No.">
+                                            <label for="service">Enter Service No.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="ack" name="ack" placeholder="Acknowledgement No.">
+                                            <label for="ack">Acknowledgement No.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="mobile" name="mobile" placeholder="Mobile No.">
+                                            <label for="mobile">Mobile No.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Owner Name">
+                                            <label for="name">Owner Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="{% url 'property-list' %}"><button class="btn btn-primary py-2 me-2">Search</button></a>
+                                        <button class="btn btn-dark py-2">Reset</button>
+                                    </div>
+                                </div>
+                            <!-- </form>  -->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    {% endblock %}

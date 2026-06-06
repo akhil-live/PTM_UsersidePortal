@@ -1,0 +1,342 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Property Tax Details{% endblock %}
+
+    {% block content %}
+        <div class="container-fluid position-relative p-0">
+          <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Property Tax Details</h4>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container-fluid about py-3">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="bg-light p-3 rounded h-100 wow fadeInUp">
+                            <h4 class="text-primary">Property Tax Details</h4>
+                            <div class="row">
+                              <div class="col-md-12 col-12">
+                                <div class="card card-stats card-round">
+                                  <div class="card-header d-print-none text-start">
+                                    <a href="{% url 'search-property' %}"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i></i> Back</strong></button></a>
+                                  </div>
+                                  <div class="card-body"> 
+                                    <div class="row" style="width:203mm;height:auto;margin:auto; border:#567EBF dotted 2px;padding:8px;" id="printableArea">
+                                      <div class="table-responsive demandPrintView" style="width:100%; background:#FFFFFF; padding: 1px;">
+                                        <table class="display table table-borderless" width="100%">
+                                          <tbody>
+                                            <tr>
+                                              <td style="padding: 0px;">
+                                                <div style="float:left; width:100px; padding:1px;  text-align:left; ">
+                                                  <img src="{% static 'images/portal/logo/janani_logo.png' %}" alt="Janani Logo" width="80">
+                                                </div>
+                                                <div style="float:right; text-align:right; width:175px; padding:1px;   ">
+                                                  <img src="{% static 'images/portal/logo/swachh_bharat.jpg' %}" alt="swachh_bharat Logo" width="170" style="margin-top:10px;margin-bottom: 0px;">
+                                                </div>
+                                                <div class="text-center" style=" text-align:center; color:#003B5D; line-height:28px;  padding-top:5px; margin: auto;">
+                                                  <span style="font-weight:bold; font-size:26px">नगर निगम जयपुर</span>
+                                                <br>
+                                                <span style="font-size:20px; font-weight:bold;">नगरीय विकास कर निर्धारण सूचना / बिल 2025-2026</span>
+                                                <br>
+                                                <span style="font-size:14px">( राजस्थान नगरपालिका अधिनियम, 2009 की धारा 128-129 के अन्तर्गत )</span>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <div style="padding:8px; border:#567EBF solid 6px; margin-bottom:10px;">
+                                          <div style="font-size: 0.813rem;">
+                                            <span class="fw-bold">Date: <span class="fw-bold">02/04/2026 11:07 a.m.</span></span>
+                                          </div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">सर्विस क्र.(Service No.)</td>
+                                                <td class="fw-bold">579854231</td>
+                                                <td class="fw-bold">मोबाइल न.(Mobile No.)</td>
+                                                <td class="fw-bold">9784542912</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">नया वार्ड क्र. (New Ward No.)</td>
+                                                <td class="fw-bold">4</td>
+                                                <td class="fw-bold">पुराना वार्ड क्र. (Old Ward No.)</td>
+                                                <td class="fw-bold">1</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">स्वामी / अधिभोगी का नाम (Owner/Occupier Name)</td>
+                                                <td class="fw-bold" colspan="3">B.K.MALPANI NARAYAN MALPANI</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">सम्पत्ति का पता (Property Address)</td>
+                                                <td class="fw-bold" colspan="3">0 None RAJ.HIGH.SCHOOL KE SAMNE MAIN SIKAR ROAD HARMADA GAON HARMADA GAON 302032</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="fw-bold">पत्राचार पता (Correspondence Address)</td>
+                                                <td class="fw-bold" colspan="3">0 None RAJ.HIGH.SCHOOL KE SAMNE MAIN SIKAR ROAD HARMADA GAON HARMADA GAON 302032</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">भूखण्ड क्षेत्रफल <br> (वर्गगज में) <br>[ Plot Area (in Sq.Yd.) ]</td>
+                                                <td class="fw-bold">निर्मित तल <br> क्षेत्रफल (वर्ग गज में) <br>[ Plinth Area (in Sq.Yd.) ]</td>
+                                                <td class="fw-bold">खाली क्षेत्रफल <br> (वर्ग गज में) <br>[ Vacant Area (in Sq.Yd.) ]</td>
+                                                <td class="fw-bold">कुल निर्मित क्षेत्रफल <br> (वर्ग फुट में) <br>[ Total Builtup Area (in Sq.Ft.) ]</td>
+                                                <td class="fw-bold">डीएलसी क्षेत्र <br>[ DLC Area ]</td>
+                                                <td class="fw-bold">फ्लैट/काॅम्प्लेक्स/ <br>बहुस्वामित्व <br>[Multiple Ownership]</td>
+                                                <td class="fw-bold">सड़क <br>[Road]</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">411.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">411.0</td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold">HARMADA GAON-</td>
+                                                <td class="fw-bold">No</td>
+                                                <td class="fw-bold">Exterior Road</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">SI</td>
+                                                <td class="fw-bold">Floor</td>
+                                                <td class="fw-bold">Usage Type</td>
+                                                <td class="fw-bold">Usage Category</td>
+                                                <td class="fw-bold">From Year</td>
+                                                <td class="fw-bold">Upto Year</td>
+                                                <td class="fw-bold">Area(in Sq.Feet)</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold"></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">SI</td>
+                                                <td class="fw-bold">Usage Type</td>
+                                                <td class="fw-bold">Usage Category</td>
+                                                <td class="fw-bold">DLC Rate (per Sq.m) <br>(Current Year)</td>
+                                                <td class="fw-bold">Area (in Sq.Yd.) <br>(Current Year)</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">1</td>
+                                                <td class="fw-bold">Residential</td>
+                                                <td class="fw-bold">General</td>
+                                                <td class="fw-bold">13000.0</td>
+                                                <td class="fw-bold">411.00</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <strong style="font-size:13px" >Ledger Detail :</strong>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr class="text-center" style="border-top: 1px solid #abafb9">
+                                                <td class="fw-bold">Year</td>
+                                                <td class="fw-bold">Particulars</td>
+                                                <td class="fw-bold">Demand</td>
+                                                <td class="fw-bold">Adjustment</td>
+                                                <td class="fw-bold">Penalty</td>
+                                                <td class="fw-bold">Rebate</td>
+                                                <td class="fw-bold">Payment</td>
+                                                <td class="fw-bold">Balance</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">2003-2004</td>
+                                                <td class="fw-bold">BILL</td>
+                                                <td class="fw-bold">206.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">206.00</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold">BILL</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">469.68</td>
+                                                <td class="fw-bold">572.68</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">103.00</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold">2004-2005</td>
+                                                <td class="fw-bold">BILL</td>
+                                                <td class="fw-bold">206.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">309.00</td>
+                                              </tr>
+                                              <tr class="text-center">
+                                                <td class="fw-bold"></td>
+                                                <td class="fw-bold">2004-12-01 RCT112202235424</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">469.68</td>
+                                                <td class="fw-bold">572.68</td>
+                                                <td class="fw-bold">0.0</td>
+                                                <td class="fw-bold">206.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="8"></td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Total Tax</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Total Penalty</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Current Tax Rebate</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Demand Rebate (50.0% rebate on Demand from 2007-04-01 to 2011-03-31)</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Penalty Rebate (100.0% rebate on Penalty from 2007-04-01 to 2025-03-31)</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Female Ownership Rebate (@10% of Current Year Tax Demand)</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Advance Amount</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Net Payable(UD Tax)</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Total House Tax ()</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">House Tax Rebate</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Net Payable(House Tax)</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="7" class="text-start fw-bold">Net Payable</td>
+                                                <td class="text-center fw-bold">0.00</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div>
+                                          <table class="display table table-bordered" width="100%">
+                                            <tbody>
+                                              <tr style="border-top: 1px solid #abafb9">
+                                                <td colspan="3">
+                                                  <span class="fw-bold">नोट:</span>
+                                                  <ol>
+                                                    <li>यह नगरीय विकास कर निर्धारण सूचना/बिल कार्यालय रिकार्ड के अनुसार प्रेषित किया जा रहा है।</li>
+                                                    <li>सहमति की स्थिति में बिल पर निर्धारित स्थान पर हस्ताक्षर कर राशि नगर निगम की हेल्पलाईन / ऑन लाइन www.rajmunicipal.com पर जमा करवा सकते हैं।</li>
+                                                    <li>आपत्ति होने पर स्वकर निर्धारण प्रपत्र को भरकर स्वयं कर का निर्धारण कर जमा करायें। ध्यान रहे कि स्वामित्व, उपयोग परिवर्तन, निर्माण परिवर्धन आदि की सूचना छिपाने पर धारा 126(2) के अंतर्गत पुनः कर निर्धारण किया जाकर शास्ति सहित वसूली की जावेगी।</li>
+                                                    <li>इसी सम्पत्ति के लिए किसी अन्य नाम से कोई और बिल प्राप्त होने पर, सम्बन्धित बिल एवं दस्तावेजों सहित नगर निगम की UD TAX शाखा में सम्पर्क करें।</li>
+                                                    <li>यदि आपके द्वारा इस बिल में दर्शायी किसी राशि का भुगतान पूर्व में किया जा चुका हो तो मूल रसीद एवं उसकी एक फोटोकाॅपी सहित नगर निगम की UD TAX शाखा में सम्पर्क करें।</li>
+                                                    <li>नगरीय विकास कर का बिल स्वामित्व के साक्ष्य के लिए मान्य नहीं होगा |</li>
+                                                    <li><strong>For any query dial Toll Free Number : 1800-572-8545 or go to rajmunicipal.com to register your complaint.</strong></li>
+                                                    <li>उक्त बिल के संबंध मैं यदि संपत्ति धारक / अधिभोगी को किसी प्रकार की आपत्ति है तो 15 दिवस के भीतर निगम मुख्यालय या संबंधित ज़ोन कार्यालय मैं आपत्ति दर्ज करवा सकते है ।</li>
+                                                  </ol>
+                                                </td>
+                                                <td>
+                                                  <div style="width:140px; height:140px; border:solid 1px #333" id="qrcode-scan">
+                                                    <img src="{% static 'images/portal/img/sampleqr.png' %}" alt="QR Code" width="140" height="140">
+                                                    <span class="text-center">*Scan to pay online</span>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="4">
+                                                  <table class="display table table-borderless" width="100%" style="margin-bottom: 0.5rem;">
+                                                    <tbody>
+                                                      <tr class="text-center">
+                                                        <td width="33%" style="border-bottom: 0px;">
+                                                          राजस्व अधिकारी
+                                                          <br>
+                                                          (कम्प्यूटर से जारी हस्ताक्षर आवश्यक नहीं)	
+                                                        </td>
+                                                        <td width="33%" style="border-bottom: 0px;">
+                                                          भूल-चूक लेनी देनी
+                                                        </td>
+                                                        <td width="33%" style="border-bottom: 0px;">
+                                                          सम्पत्ति स्वामी/अधिभोगी के हस्ताक्षर एवं नाम
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              
+                                            </tbody>
+                                          </table>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                    <div class="d-print-none">
+                                        <p class="text-center pt-2">
+                                            <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
+                                            <button type="submit" class="btn btn-secondary btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Download</strong></button>
+                                        </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>                       
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+      {% block portal_page_js %}
+      <script>
+        function printTable(areaID) 
+        {
+            var printContent = document.getElementById(areaID).innerHTML;
+            var originalContent = document.body.innerHTML;
+            document.body.innerHTML = printContent;
+            window.print();
+            document.body.innerHTML = originalContent;
+        }
+      </script>
+      {% endblock %}
+    
