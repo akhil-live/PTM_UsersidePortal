@@ -1,0 +1,381 @@
+{% extends 'base-portal.html' %}
+{% load static %}
+
+{% block title %}Self Assessment Form{% endblock %}
+
+    {% block content %} 
+    <div class="container-fluid about py-3">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="bg-light p-3 rounded h-100 wow fadeInUp">
+                      <h4 class="text-primary">Self Assessment Form</h4>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card card-stats card-round">
+                              <div class="card-header d-print-none text-start">
+                                <a href="{% url 'new-assessment' %}"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i> Back</strong></button></a>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <h5 class="pb-1"><strong>Property Details</strong></h5>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="wardNo">Ward No.</label>
+                                        <select class="form-select" id="wardNo" name="wardNo" required>
+                                          <option value="">Select Ward</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="areaName">Area Name</label>
+                                        <select class="form-select" id="areaName" name="areaName" required>
+                                          <option value="">Select Area</option>
+                                          <option value="">4S Scheme</option>
+                                          <option value="">4S Colony</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="roadType">Road Type</label>
+                                        <select class="form-select" id="roadType" name="roadType" required>
+                                          <option value="">Select</option>
+                                          <option value="">Interior Road</option>
+                                          <option value="">Exterior Road</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="plotArea">Plot Area (in Sq Yd)</label>
+                                      <input type="text" id="plotArea" name="plotArea" class="form-control" placeholder="Enter plot area" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="plinthArea">Plinth Area (in Sq Yd)</label>
+                                      <input type="text" id="plinthArea" name="plinthArea" class="form-control" placeholder="Enter plinth area" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="vacantArea">Vacant Area (in Sq Yd) </label>
+                                      <input type="text" id="vacantArea" name="vacantArea" class="form-control" placeholder="Enter vacant area" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="multiStorage">Multi Storage/Complex</label>
+                                        <select class="form-select" id="multiStorage" name="multiStorage" required>
+                                          <option value="">Select</option>
+                                          <option value="Yes">Yes</option>
+                                          <option value="No">No</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="isExParty">Is Ex Party</label>
+                                        <select class="form-select" id="isExParty" name="isExParty" required>
+                                          <option value="">Select</option>
+                                          <option value="Yes">Yes</option>
+                                          <option value="No">No</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                </div>
+                                
+                                <div class="row">
+                                  <h5 class="pt-3"><strong>Permanent Address</strong></h5>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="HouseNo">House No.</label>
+                                       <input type="text" id="HouseNo" name="HouseNo" class="form-control" placeholder="Enter House Number" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="colony">Colony Name</label>
+                                       <input type="text" id="colony" name="colony" class="form-control" placeholder="Enter Mohalla / Colony Name" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="street">Street</label>
+                                      <input type="text" id="street" name="street" class="form-control" placeholder="Enter street name">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="landmark ">Landmark</label>
+                                      <input type="text" id="landmark" name="landmark" class="form-control" placeholder="Enter landmark" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="pincode">Pin Code</label>
+                                      <input type="number" id="pincode" name="pincode" class="form-control" placeholder="Enter pin code" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="mobile">Mobile No.</label>
+                                      <input type="number" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="city ">Address (City) </label>
+                                      <input type="text" id="city" name="roadName" class="form-control" placeholder="Enter city" required>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <h5 class="pt-3"><strong>Current Address</strong></h5>
+                                  <div class="col-12">
+                                    <div class="form-group">
+                                      <span for="checkAddress" style="font-size: 14px; color: #495057;"> Check, if Permanent Address is same as Current Address: </span>
+                                      <input type="checkbox" name="checkAddress" id="checkAddress" class="mx-1">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="HouseNo">House No.</label>
+                                       <input type="text" id="HouseNo" name="HouseNo" class="form-control" placeholder="Enter House Number" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="colony">Colony Name</label>
+                                       <input type="text" id="colony" name="colony" class="form-control" placeholder="Enter Mohalla / Colony Name" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="street">Street</label>
+                                      <input type="text" id="street" name="street" class="form-control" placeholder="Enter street name">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="landmark ">Landmark</label>
+                                      <input type="text" id="landmark" name="landmark" class="form-control" placeholder="Enter landmark" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="pincode">Pin Code</label>
+                                      <input type="number" id="pincode" name="pincode" class="form-control" placeholder="Enter pin code" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="mobile">Mobile No.</label>
+                                      <input type="number" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="city ">Address (City) </label>
+                                      <input type="text" id="city" name="roadName" class="form-control" placeholder="Enter city" required>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <h5 class="pt-3"><strong>Owners Details</strong></h5>
+                                  <div class="col-12">
+                                    <div class="form-group">
+                                      <span for="isRenter" style="font-size: 14px; color: #495057;"> Is Renter: </span>
+                                      <input type="checkbox" name="isRenter" id="isRenter" class="mx-1">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="ownerName">Owner Name</label>
+                                       <input type="text" id="ownerName" name="ownerName" class="form-control" placeholder="Enter owner name" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="relation">Relation</label>
+                                        <select class="form-select" id="relation" name="relation" required>
+                                          <option value="">Select</option>
+                                          <option value="s/o">S/O</option>
+                                          <option value="d/o">D/O</option>
+                                          <option value="w/o">W/O</option>
+                                          <option value="c/o">C/O</option>
+                                       </select>    
+                                    </div>                       
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="guardianName">Guardian Name</label>
+                                      <input type="text" id="guardianName" name="guardianName" class="form-control" placeholder="Enter guardian name" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="age">Age</label>
+                                      <input type="number" id="age" name="age" class="form-control" placeholder="Enter age" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="mobileNo">Mobile No.</label>
+                                      <input type="number" id="mobileNo" name="mobileNo" class="form-control" placeholder="Enter mobile number" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="gender">Gender</label>
+                                        <select class="form-select" id="gender" name="gender" required>
+                                          <option value="">Select</option>
+                                          <option value="male">Male</option>
+                                          <option value="female">Female</option>
+                                          <option value="other">Other</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="occupation">Occupation</label>
+                                        <select class="form-select" id="occupation" name="occupation" required>
+                                          <option value="">Select</option>
+                                          <option value="service">Service</option>
+                                          <option value="business">Business</option>
+                                          <option value="housewife">House-Wife</option>
+                                          <option value="others">Other</option>
+                                        </select>    
+                                    </div>                       
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <h5 class="pt-3"><strong>Floor Details</strong></h5>
+                                  <div class="col-lg-10 col-md-8 col-sm-12">
+                                    <div class="row">
+                                      <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="floorName">Floor Name </label>
+                                            <select class="form-select" id="floorName" name="floorName" required>
+                                              <option value="">Select</option>
+                                              <option value="">Basement - 1</option>
+                                              <option value="">Ground Floor</option>
+                                          </select>    
+                                        </div>                       
+                                      </div>
+                                      <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="useType">Usage Type</label>
+                                            <select class="form-select" id="useType" name="useType" required>
+                                              <option value="">Select</option>
+                                              <option value="">Residential</option>
+                                              <option value="">Commercial</option>
+                                          </select>    
+                                        </div>                       
+                                      </div>
+                                      <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="usageCategory ">Usage Category</label>
+                                            <select class="form-select" id="usageCategory" name="usageCategory" required>
+                                              <option value="">Select</option>
+                                              <option value="">4/5 Star Hotel</option>
+                                              <option value="">Airport</option>
+                                          </select>    
+                                        </div>                       
+                                      </div>
+                                      <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="fromYear">From Year</label>
+                                            <select class="form-select" id="fromYear" name="fromYear" required>
+                                              <option value="">Select</option>
+                                              <option value="">2020-2021</option>
+                                              <option value="">2021-2022</option>
+                                            </select>    
+                                        </div>                       
+                                      </div>
+                                      <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="uptoYear">Upto Year</label>
+                                            <select class="form-select" id="uptoYear" name="uptoYear">
+                                              <option value="">Select</option>
+                                              <option value="">2024-2025</option>
+                                              <option value="">2025-2026</option>
+                                            </select>    
+                                        </div>                       
+                                      </div>
+                                      <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="builtUpArea">Built Up Area (in Sq ft)</label>
+                                          <input type="text" id="builtUpArea" name="builtUpArea" class="form-control" placeholder="Enter builtup area" required>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-2 col-md-4 col-sm-12">
+                                    <div class="row">
+                                      <div class="col-lg-2 col-md-4 col-sm-12 mx-2">
+                                        <button type="submit" class="btn btn-primary btn-sm my-2" name="submit"><strong>Add</strong></button>
+            
+                                        <button type="submit" class="btn btn-danger btn-sm" name="submit"><strong>Remove</strong></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <h5 class="pt-3"><strong>Last Payment Details</strong></h5>
+                                  <div class="col-12">
+                                    <div class="form-group">
+                                      <span for="lastPayment" style="font-size: 14px; color: #495057;">  Check, if Last Payment is Available :  </span>
+                                      <input type="checkbox" name="lastPayment" id="lastPayment" class="mx-1">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="lastReceiptNo">Last Receipt No.</label>
+                                      <input type="text" id="lastReceiptNo" name="lastReceiptNo" class="form-control" placeholder="Enter last receipt number">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="lastPaymentDate">Last Payment Date</label>
+                                      <input type="date" id="lastPaymentDate" name="lastPaymentDate" class="form-control">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="lastpayAmt">Last Payment Amount</label>
+                                      <input type="text" id="lastpayAmt" name="lastpayAmt" class="form-control" placeholder="Enter last payment amount">
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                      <label for="lastPaymentYear">Last Payment Year</label>
+                                        <select class="form-select" id="lastPaymentYear" name="lastPaymentYear">
+                                          <option value="">2007-2008</option>
+                                          <option value="">2008-2009</option>
+                                          <option value="">2009-2010</option>
+                                       </select>    
+                                    </div>                       
+                                  </div>
+                                </div>
+                                <div class="d-print-none">
+                                    <p class="text-center pt-3">
+                                        <button type="submit" class="btn btn-success btn-sm" name="submit"><strong>Submit</strong></button>
+                                    </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
