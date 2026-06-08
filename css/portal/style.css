@@ -86,7 +86,14 @@
     color: var(--bs-white);
     background: var(--bs-primary);
 }
-
+.form-group {
+    margin-bottom: 0;
+    padding: 10px 10px 10px 0px;
+}
+.form-group label {
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+}
 
 /*** Topbar Start ***/
 .topbar .dropdown-toggle::after {
