@@ -915,6 +915,9 @@
 .card-stats .card-body .form-group select {
     color:#252525;
 }
+.card-stats .card-body .form-group textarea {
+    color:#252525;
+}
 /*** Card Heading End ***/
 
 /*** Datatable Start ***/
