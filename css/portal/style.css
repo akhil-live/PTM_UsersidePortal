@@ -906,6 +906,15 @@
     background: #c2dff4;
     box-shadow: 2px 6px 15px 0px rgba(69, 65, 78, 0.1);
 }
+.card-stats .card-body .form-group label {
+    color:#525252;
+}
+.card-stats .card-body .form-group input {
+    color:#252525;
+}
+.card-stats .card-body .form-group select {
+    color:#252525;
+}
 /*** Card Heading End ***/
 
 /*** Datatable Start ***/
