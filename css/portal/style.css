@@ -377,7 +377,7 @@
     .header-carousel .owl-nav .owl-next {
         left: 50%;
         transform: translateX(-50%);
-        margin-left: 45px;
+        margin-left: 32px;
     }
     .header-carousel .header-carousel-item,
     .header-carousel .header-carousel-item img {
@@ -867,11 +867,14 @@
     }
 
     @media (max-width: 576px) {
-
+        h4 {
+            font-size: calc(1.2rem + 0.3vw);
+        }
+        
       .marquee-container {
         height: 180px;
       }
-
+        
       .notification-item {
         font-size: 14px;
         padding: 12px;
@@ -885,16 +888,19 @@
         .header-carousel .owl-nav .owl-prev,
         .header-carousel .owl-nav .owl-next {
             position: absolute;
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 60px;
             background: var(--bs-primary);
             color: var(--bs-white);
-            font-size: 22px;
+            font-size: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: 0.5s;
+        }
+        .feature .feature-item .feature-icon i {
+            font-size: 2.6rem;
         }
     }
 
