@@ -761,7 +761,7 @@
 
 .footer .footer-item a {
     line-height: 35px;
-    color: var(--bs-body);
+    color: #787878;
     transition: 0.5s;
 }
 .footer .footer-logo {
